@@ -8,7 +8,8 @@
 
     $condition = null;
     if ( isset($_POST["nickname"]) && !empty($_POST["nickname"]) ) {
-        $condition = "WHERE nickname = '{$_POST["nickname"]}'";
+        $condition = "WHERE nickname = '{$_POST["nickname"]}' ";
+        // $condition = "WHERE nickname = '".$_POST["nickname"]."' ";
     }
     $sql = "SELECT * FROM students {$condition}";
     // $response["query"] = $sql;
